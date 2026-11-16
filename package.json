@@ -1,0 +1,23 @@
+{
+  "name": "breachline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-based P2P multiplayer FPS (static site, no build step)",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node tools/test-rules.mjs && node tools/test-sim.mjs && node tools/test-net.mjs && node tools/validate-maps.mjs",
+    "test:rules": "node tools/test-rules.mjs",
+    "test:sim": "node tools/test-sim.mjs",
+    "test:net": "node tools/test-net.mjs",
+    "test:browser": "node tools/test-browser.mjs",
+    "validate": "node tools/validate-maps.mjs",
+    "peer-server": "peerjs --port 9000 --path / --host 127.0.0.1",
+    "vendor": "cp node_modules/three/build/three.module.min.js vendor/ && cp node_modules/peerjs/dist/peerjs.min.js vendor/"
+  },
+  "devDependencies": {
+    "peer": "^1.0.2",
+    "peerjs": "^1.5.4",
+    "three": "^0.170.0"
+  }
+}

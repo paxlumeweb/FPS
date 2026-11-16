@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breachline</title>
+  <meta name="description" content="Breachline — a browser-based peer-to-peer multiplayer FPS.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0e13'/%3E%3Cpath d='M6 22 16 6l10 16h-6l-4-7-4 7z' fill='%23f5a524'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="hud" class="hidden"></div>
+  <div id="screens"></div>
+  <div id="toasts"></div>
+  <div id="boot">
+    <div class="boot-title">BREACHLINE</div>
+    <div class="boot-sub" id="boot-msg">Loading…</div>
+  </div>
+  <noscript><div style="position:fixed;inset:0;display:grid;place-items:center;color:#fff;background:#0b0e13">Breachline needs JavaScript.</div></noscript>
+
+  <!-- Vendored libraries (no CDN, no build step): see CREDITS.md -->
+  <script src="vendor/peerjs.min.js"></script>
+  <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
